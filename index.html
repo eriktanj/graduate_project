@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HitL Intelligent Digital Twin for an Educational Robotic Assembly Training Cell</title>
-<meta name="description" content="Human-in-the-Loop Intelligent Digital Twin for an Educational Robotic Assembly Training Cell. Research project by Erik Tanjuakio, Aditya Chivate, and Mohamed Awwad at California Polytechnic State University, San Luis Obispo.">
+<meta name="description" content="Human-in-the-Loop Intelligent Digital Twin for an Educational Robotic Assembly Training Cell. Research project by Erik Tanjuakio, Mohamed Awwad, and Aditya Chivate at California Polytechnic State University, San Luis Obispo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -755,6 +755,38 @@ body {
 }
 .card-link:hover .card, .card-link:focus-visible .card { box-shadow: var(--shadow-md); transform: translateY(-2px); }
 
+
+/* ── References page ─────────────────────────────────────────────────── */
+.ref-list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 0;
+}
+.ref-item {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--surface-3);
+  display: grid; grid-template-columns: 160px 1fr;
+  gap: .75rem; align-items: baseline;
+}
+.ref-item:first-child { border-top: 1px solid var(--surface-3); }
+.ref-item:nth-child(even) { background: var(--surface-2); }
+.ref-cite {
+  font-family: var(--font-mono); font-size: .75rem; font-weight: 600;
+  color: var(--cp-green-mid); line-height: 1.5;
+  padding-top: .1rem;
+}
+.ref-text {
+  font-size: .88rem; color: var(--ink-mid); line-height: 1.68; margin: 0;
+}
+.ref-doi {
+  font-size: .78rem; color: var(--cp-green-mid);
+  word-break: break-all; display: block; margin-top: .25rem;
+}
+.ref-doi:hover { color: var(--cp-green); text-decoration: underline; }
+@media (max-width: 600px) {
+  .ref-item { grid-template-columns: 1fr; gap: .25rem; }
+  .ref-cite { font-size: .7rem; }
+}
+
 /* ── Print ───────────────────────────────────────────────────────────── */
 @media print {
   .site-header, .site-footer { display: none; }
@@ -784,6 +816,9 @@ body {
       <button class="nav-btn"         id="nav-track-b" onclick="showPage('track-b')">
         <span>Track B</span>
         <span class="nav-pill pill-b" aria-label="4 modules">4</span>
+      </button>
+      <button class="nav-btn" id="nav-references" onclick="showPage('references')">
+        <span>References</span>
       </button>
     </nav>
   </div>
@@ -832,8 +867,8 @@ body {
       <div class="hero-team-row">
         <div class="hero-authors" role="list" aria-label="Project team">
           <span role="listitem"><strong>Erik Tanjuakio</strong> BS Industrial Engineering, MS Engineering Management</span>
-          <span role="listitem"><strong>Aditya Chivate</strong> Faculty Advisor</span>
           <span role="listitem"><strong>Mohamed Awwad</strong> Faculty Advisor</span>
+          <span role="listitem"><strong>Aditya Chivate</strong> Faculty Advisor</span>
         </div>
         <div class="hero-badge" role="contentinfo" aria-label="Institution">
           <span aria-hidden="true">🎓</span>
@@ -1675,6 +1710,187 @@ body {
     </div>
   </div>
 </div>
+
+<div id="page-references" class="page" role="main" aria-labelledby="refs-title">
+  <div class="breadcrumb">
+    <nav aria-label="Breadcrumb">
+      <a href="#" onclick="showPage('home')">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">References</span>
+    </nav>
+  </div>
+  <div class="content-wrap" style="max-width:860px">
+    <span class="section-label">Bibliography</span>
+    <h2 class="section-title" id="refs-title">References</h2>
+    <p class="section-lead" style="margin-bottom:2rem">
+      All sources cited across the project literature review, learning modules, and expert consultations.
+      40 references in APA format.
+    </p>
+    <ol class="ref-list" aria-label="Reference list">
+      
+    <li class="ref-item" id="ref-Afanasyev-et-al.-2019">
+      <span class="ref-cite">Afanasyev et al., 2019</span>
+      <p class="ref-text">Afanasyev, I., Kolotov, A., Rezin, R., Dheaded, K., Mazzara, M., &amp; Chakraborty, S. (2019). Towards the Internet of Robotic Things: Analysis, architecture, components and challenges.</p>
+    </li>
+    <li class="ref-item" id="ref-Alghamdi-et-al.-2025">
+      <span class="ref-cite">Alghamdi et al., 2025</span>
+      <p class="ref-text">Alghamdi, S., Yoon, H. Y., &amp; Song, Y.-T. (2025). Digital twins in education: Applications, challenges, and future directions. <em>2025 IEEE/ACIS 23rd International Conference on Software Engineering Research, Management and Applications (SERA)</em>, 225-232. <a href="https://doi.org/10.1109/sera65747.2025.11154576" target="_blank" rel="noopener" aria-label="DOI link for Alghamdi et al., 2025" class="ref-doi">https://doi.org/10.1109/sera65747.2025.11154576</a></p>
+    </li>
+    <li class="ref-item" id="ref-Amershi-et-al.-2014">
+      <span class="ref-cite">Amershi et al., 2014</span>
+      <p class="ref-text">Amershi, S., Cakmak, M., Knox, W. B., &amp; Kulesza, T. (2014). Power to the people: The role of humans in interactive machine learning. <em>AI Magazine, 35</em>(4), 105-120. <a href="https://doi.org/10.1609/aimag.v35i4.2513" target="_blank" rel="noopener" aria-label="DOI link for Amershi et al., 2014" class="ref-doi">https://doi.org/10.1609/aimag.v35i4.2513</a></p>
+    </li>
+    <li class="ref-item" id="ref-Atzori-et-al.-2010">
+      <span class="ref-cite">Atzori et al., 2010</span>
+      <p class="ref-text">Atzori, L., Iera, A., &amp; Morabito, G. (2010). The Internet of Things: A survey. <em>Computer Networks, 54</em>(15), 2787-2805. <a href="https://doi.org/10.1016/j.comnet.2010.05.010" target="_blank" rel="noopener" aria-label="DOI link for Atzori et al., 2010" class="ref-doi">https://doi.org/10.1016/j.comnet.2010.05.010</a></p>
+    </li>
+    <li class="ref-item" id="ref-Blackwell-and-Rocke-2024">
+      <span class="ref-cite">Blackwell &amp; Rocke, 2024</span>
+      <p class="ref-text">Blackwell, C., &amp; Rocke, S. (2024). WIP: A review of digital twin technology in undergraduate control engineering education: Applications, challenges, and future directions. <em>2024 IEEE Frontiers in Education Conference (FIE)</em>, 1-5. <a href="https://doi.org/10.1109/fie61694.2024.10893435" target="_blank" rel="noopener" aria-label="DOI link for Blackwell &amp; Rocke, 2024" class="ref-doi">https://doi.org/10.1109/fie61694.2024.10893435</a></p>
+    </li>
+    <li class="ref-item" id="ref-Boyes-et-al.-2018">
+      <span class="ref-cite">Boyes et al., 2018</span>
+      <p class="ref-text">Boyes, H., Hallaq, B., Cunningham, J., &amp; Watson, T. (2018). The industrial internet of things (IIoT): An analysis framework. <em>Computers in Industry, 101</em>, 1-12. <a href="https://doi.org/10.1016/j.compind.2018.04.015" target="_blank" rel="noopener" aria-label="DOI link for Boyes et al., 2018" class="ref-doi">https://doi.org/10.1016/j.compind.2018.04.015</a></p>
+    </li>
+    <li class="ref-item" id="ref-Breque-et-al.-2021">
+      <span class="ref-cite">Breque et al., 2021</span>
+      <p class="ref-text">Breque, M., De Nul, L., &amp; Petridis, A. (2021). <em>Industry 5.0: Towards a sustainable, human-centric and resilient European industry.</em> European Commission, Directorate-General for Research and Innovation.</p>
+    </li>
+    <li class="ref-item" id="ref-Broad-et-al.-2017">
+      <span class="ref-cite">Broad et al., 2017</span>
+      <p class="ref-text">Broad, A., Murphey, T., &amp; Argall, B. (2017). Learning models for shared autonomy. <em>2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>, 4619-4626. <a href="https://doi.org/10.1109/IROS.2017.8206329" target="_blank" rel="noopener" aria-label="DOI link for Broad et al., 2017" class="ref-doi">https://doi.org/10.1109/IROS.2017.8206329</a></p>
+    </li>
+    <li class="ref-item" id="ref-Calderón-et-al.-2022">
+      <span class="ref-cite">Calderón et al., 2022</span>
+      <p class="ref-text">Calderón, A. J., González, I., &amp; Folgado, F. J. (2022). Introducing digital twins in automation and robotics laboratory sessions. <em>INTED2022 Proceedings, 1</em>, 2709-2715. <a href="https://doi.org/10.21125/inted.2022.0792" target="_blank" rel="noopener" aria-label="DOI link for Calderón et al., 2022" class="ref-doi">https://doi.org/10.21125/inted.2022.0792</a></p>
+    </li>
+    <li class="ref-item" id="ref-Collet-et-al.-2011">
+      <span class="ref-cite">Collet et al., 2011</span>
+      <p class="ref-text">Collet, A., Martinez, M., &amp; Srinivasa, S. S. (2011). The MOPED framework: Object recognition and pose estimation for manipulation. <em>International Journal of Robotics Research, 30</em>(10), 1284-1306. <a href="https://doi.org/10.1177/0278364911401765" target="_blank" rel="noopener" aria-label="DOI link for Collet et al., 2011" class="ref-doi">https://doi.org/10.1177/0278364911401765</a></p>
+    </li>
+    <li class="ref-item" id="ref-Cortés-et-al.-2020">
+      <span class="ref-cite">Cortés et al., 2020</span>
+      <p class="ref-text">Cortés, D., Ramirez, J., Villagomez, L., Batres, R., Vasquez-Lopez, V., &amp; Molina, A. (2020). Digital pyramid: An approach to relate industrial automation and digital twin concepts. <em>2020 IEEE International Conference on Engineering, Technology and Innovation (ICE/ITMC)</em>, 1-7. <a href="https://doi.org/10.1109/ice/itmc49519.2020.9198643" target="_blank" rel="noopener" aria-label="DOI link for Cortés et al., 2020" class="ref-doi">https://doi.org/10.1109/ice/itmc49519.2020.9198643</a></p>
+    </li>
+    <li class="ref-item" id="ref-Dragan-and-Srinivasa-2013">
+      <span class="ref-cite">Dragan &amp; Srinivasa, 2013</span>
+      <p class="ref-text">Dragan, A. D., &amp; Srinivasa, S. S. (2013). A policy-blending formalism for shared control. <em>International Journal of Robotics Research, 32</em>(7), 790-805. <a href="https://doi.org/10.1177/0278364913490324" target="_blank" rel="noopener" aria-label="DOI link for Dragan &amp; Srinivasa, 2013" class="ref-doi">https://doi.org/10.1177/0278364913490324</a></p>
+    </li>
+    <li class="ref-item" id="ref-Eriksson-et-al.-2022">
+      <span class="ref-cite">Eriksson et al., 2022</span>
+      <p class="ref-text">Eriksson, K., Alsaleh, A., Behzad Far, S., &amp; Stjern, D. (2022). Applying digital twin technology in higher education: An automation line case study. <em>Advances in Transdisciplinary Engineering.</em> IOS Press. <a href="https://doi.org/10.3233/atde220165" target="_blank" rel="noopener" aria-label="DOI link for Eriksson et al., 2022" class="ref-doi">https://doi.org/10.3233/atde220165</a></p>
+    </li>
+    <li class="ref-item" id="ref-Fuller-et-al.-2020">
+      <span class="ref-cite">Fuller et al., 2020</span>
+      <p class="ref-text">Fuller, A., Fan, Z., Day, C., &amp; Barlow, C. (2020). Digital twin: Enabling technologies, challenges and open research. <em>IEEE Access, 8</em>, 108952-108971. <a href="https://doi.org/10.1109/ACCESS.2020.2998358" target="_blank" rel="noopener" aria-label="DOI link for Fuller et al., 2020" class="ref-doi">https://doi.org/10.1109/ACCESS.2020.2998358</a></p>
+    </li>
+    <li class="ref-item" id="ref-García-et-al.-2022">
+      <span class="ref-cite">García et al., 2022</span>
+      <p class="ref-text">García, A., Bregón, A., &amp; Martínez-Prieto, M. A. (2022). Towards a connected digital twin learning ecosystem in manufacturing: Enablers and challenges. <em>Computers &amp; Industrial Engineering, 171</em>, 108463. <a href="https://doi.org/10.1016/j.cie.2022.108463" target="_blank" rel="noopener" aria-label="DOI link for García et al., 2022" class="ref-doi">https://doi.org/10.1016/j.cie.2022.108463</a></p>
+    </li>
+    <li class="ref-item" id="ref-González-Pérez-and-Ramírez-Montoya-2022">
+      <span class="ref-cite">González-Pérez &amp; Ramírez-Montoya, 2022</span>
+      <p class="ref-text">González-Pérez, L. I., &amp; Ramírez-Montoya, M. S. (2022). Components of Education 4.0 in 21st century skills frameworks: Systematic review. <em>Sustainability, 14</em>(3), 1493. <a href="https://doi.org/10.3390/su14031493" target="_blank" rel="noopener" aria-label="DOI link for González-Pérez &amp; Ramírez-Montoya, 2022" class="ref-doi">https://doi.org/10.3390/su14031493</a></p>
+    </li>
+    <li class="ref-item" id="ref-Goodrich-and-Schultz-2007">
+      <span class="ref-cite">Goodrich &amp; Schultz, 2007</span>
+      <p class="ref-text">Goodrich, M. A., &amp; Schultz, A. C. (2007). Human-robot interaction: A survey. <em>Foundations and Trends in Human-Computer Interaction, 1</em>(3), 203-275. <a href="https://doi.org/10.1561/1100000005" target="_blank" rel="noopener" aria-label="DOI link for Goodrich &amp; Schultz, 2007" class="ref-doi">https://doi.org/10.1561/1100000005</a></p>
+    </li>
+    <li class="ref-item" id="ref-Grieves-2014">
+      <span class="ref-cite">Grieves, 2014</span>
+      <p class="ref-text">Grieves, M. (2014). <em>Digital twin: Manufacturing excellence through virtual factory replication.</em> White paper. Florida Institute of Technology.</p>
+    </li>
+    <li class="ref-item" id="ref-Grieves-and-Vickers-2017">
+      <span class="ref-cite">Grieves &amp; Vickers, 2017</span>
+      <p class="ref-text">Grieves, M., &amp; Vickers, J. (2017). Digital twin: Mitigating unpredictable, undesirable emergent behavior in complex systems. In F.-J. Kahlen, S. Flumerfelt, &amp; A. Alves (Eds.), <em>Transdisciplinary perspectives on complex systems</em> (pp. 85-113). Springer. <a href="https://doi.org/10.1007/978-3-319-38756-7_4" target="_blank" rel="noopener" aria-label="DOI link for Grieves &amp; Vickers, 2017" class="ref-doi">https://doi.org/10.1007/978-3-319-38756-7_4</a></p>
+    </li>
+    <li class="ref-item" id="ref-Hazrat-et-al.-2023">
+      <span class="ref-cite">Hazrat et al., 2023</span>
+      <p class="ref-text">Hazrat, M. A., Hassan, N. M. S., Chowdhury, A. A., Rasul, M. G., &amp; Taylor, B. A. (2023). Developing a skilled workforce for future industry demand: The potential of digital twin-based teaching and learning practices in engineering education. <em>Sustainability, 15</em>(23), 16433. <a href="https://doi.org/10.3390/su152316433" target="_blank" rel="noopener" aria-label="DOI link for Hazrat et al., 2023" class="ref-doi">https://doi.org/10.3390/su152316433</a></p>
+    </li>
+    <li class="ref-item" id="ref-Hentout-et-al.-2019">
+      <span class="ref-cite">Hentout et al., 2019</span>
+      <p class="ref-text">Hentout, A., Aouache, M., Maoudj, A., &amp; Akli, I. (2019). Human-robot interaction in industrial collaborative robotics: A literature review of the decade 2008-2017. <em>Advanced Robotics, 33</em>(15-16), 764-799. <a href="https://doi.org/10.1080/01691864.2019.1636714" target="_blank" rel="noopener" aria-label="DOI link for Hentout et al., 2019" class="ref-doi">https://doi.org/10.1080/01691864.2019.1636714</a></p>
+    </li>
+    <li class="ref-item" id="ref-Jasim-and-Plapper-2014">
+      <span class="ref-cite">Jasim &amp; Plapper, 2014</span>
+      <p class="ref-text">Jasim, I. F., &amp; Plapper, P. W. (2014). Contact-state monitoring of force-guided robotic assembly tasks using expectation maximization-based Gaussian mixtures models. <em>International Journal of Advanced Manufacturing Technology, 73</em>(9-12), 1711-1722. <a href="https://doi.org/10.1007/s00170-014-5926-7" target="_blank" rel="noopener" aria-label="DOI link for Jasim &amp; Plapper, 2014" class="ref-doi">https://doi.org/10.1007/s00170-014-5926-7</a></p>
+    </li>
+    <li class="ref-item" id="ref-Koenig-and-Howard-2004">
+      <span class="ref-cite">Koenig &amp; Howard, 2004</span>
+      <p class="ref-text">Koenig, N., &amp; Howard, A. (2004). Design and use paradigms for Gazebo, an open-source multi-robot simulator. <em>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>, 3149-3154. <a href="https://doi.org/10.1109/IROS.2004.1389727" target="_blank" rel="noopener" aria-label="DOI link for Koenig &amp; Howard, 2004" class="ref-doi">https://doi.org/10.1109/IROS.2004.1389727</a></p>
+    </li>
+    <li class="ref-item" id="ref-Kuts-et-al.-2020">
+      <span class="ref-cite">Kuts et al., 2020</span>
+      <p class="ref-text">Kuts, V., Otto, T., Bondarenko, Y., &amp; Yu, F. (2020). Digital twin: Collaborative virtual reality environment for multi-purpose industrial applications. <em>ASME 2020 International Mechanical Engineering Congress and Exposition, Volume 2B: Advanced Manufacturing.</em> <a href="https://doi.org/10.1115/imece2020-23390" target="_blank" rel="noopener" aria-label="DOI link for Kuts et al., 2020" class="ref-doi">https://doi.org/10.1115/imece2020-23390</a></p>
+    </li>
+    <li class="ref-item" id="ref-Lee-et-al.-2015">
+      <span class="ref-cite">Lee et al., 2015</span>
+      <p class="ref-text">Lee, J., Bagheri, B., &amp; Kao, H.-A. (2015). A cyber-physical systems architecture for Industry 4.0-based manufacturing systems. <em>Manufacturing Letters, 3</em>, 18-23. <a href="https://doi.org/10.1016/j.mfglet.2014.12.001" target="_blank" rel="noopener" aria-label="DOI link for Lee et al., 2015" class="ref-doi">https://doi.org/10.1016/j.mfglet.2014.12.001</a></p>
+    </li>
+    <li class="ref-item" id="ref-Lenz-et-al.-2015">
+      <span class="ref-cite">Lenz et al., 2015</span>
+      <p class="ref-text">Lenz, I., Lee, H., &amp; Saxena, A. (2015). Deep learning for detecting robotic grasps. <em>International Journal of Robotics Research, 34</em>(4-5), 705-724. <a href="https://doi.org/10.1177/0278364914549607" target="_blank" rel="noopener" aria-label="DOI link for Lenz et al., 2015" class="ref-doi">https://doi.org/10.1177/0278364914549607</a></p>
+    </li>
+    <li class="ref-item" id="ref-Lu-2017">
+      <span class="ref-cite">Lu, 2017</span>
+      <p class="ref-text">Lu, Y. (2017). Industry 4.0: A survey on technologies, applications and open research issues. <em>Journal of Industrial Information Integration, 6</em>, 1-10. <a href="https://doi.org/10.1016/j.jii.2017.04.005" target="_blank" rel="noopener" aria-label="DOI link for Lu, 2017" class="ref-doi">https://doi.org/10.1016/j.jii.2017.04.005</a></p>
+    </li>
+    <li class="ref-item" id="ref-Luo-and-Lin-2014">
+      <span class="ref-cite">Luo &amp; Lin, 2014</span>
+      <p class="ref-text">Luo, R. C., &amp; Lin, M. H. (2014). Automated robot programming by demonstration using hybrid trajectory-force strategy approach. <em>IEEE Transactions on Industrial Informatics, 10</em>(2), 1072-1083. <a href="https://doi.org/10.1109/TII.2014.2305911" target="_blank" rel="noopener" aria-label="DOI link for Luo &amp; Lin, 2014" class="ref-doi">https://doi.org/10.1109/TII.2014.2305911</a></p>
+    </li>
+    <li class="ref-item" id="ref-Mahnke-et-al.-2009">
+      <span class="ref-cite">Mahnke et al., 2009</span>
+      <p class="ref-text">Mahnke, W., Leitner, S.-H., &amp; Damm, M. (2009). <em>OPC unified architecture.</em> Springer. <a href="https://doi.org/10.1007/978-3-540-68899-0" target="_blank" rel="noopener" aria-label="DOI link for Mahnke et al., 2009" class="ref-doi">https://doi.org/10.1007/978-3-540-68899-0</a></p>
+    </li>
+    <li class="ref-item" id="ref-Omrany-et-al.-2025">
+      <span class="ref-cite">Omrany et al., 2025</span>
+      <p class="ref-text">Omrany, H., Al-Obaidi, K. M., Ghaffarianhoseini, A., Chang, R.-D., Park, C., &amp; Rahimian, F. (2025). Digital twin technology for education, training and learning in construction industry: Implications for research and practice. <em>Engineering, Construction and Architectural Management.</em> <a href="https://doi.org/10.1108/ecam-10-2024-1376" target="_blank" rel="noopener" aria-label="DOI link for Omrany et al., 2025" class="ref-doi">https://doi.org/10.1108/ecam-10-2024-1376</a></p>
+    </li>
+    <li class="ref-item" id="ref-Park-et-al.-2017">
+      <span class="ref-cite">Park et al., 2017</span>
+      <p class="ref-text">Park, H., Bae, J.-H., Park, J.-H., &amp; Moon, H. (2017). Compliance-based robotic peg-in-hole assembly strategy without force feedback. <em>IEEE Transactions on Industrial Electronics, 64</em>(8), 6299-6309. <a href="https://doi.org/10.1109/TIE.2017.2682001" target="_blank" rel="noopener" aria-label="DOI link for Park et al., 2017" class="ref-doi">https://doi.org/10.1109/TIE.2017.2682001</a></p>
+    </li>
+    <li class="ref-item" id="ref-Profanter-et-al.-2019">
+      <span class="ref-cite">Profanter et al., 2019</span>
+      <p class="ref-text">Profanter, S., Tekat, A., Dorofeev, K., Rickert, M., &amp; Knoll, A. (2019). OPC UA abstract communication layer for different industrial use-cases. <em>Procedia CIRP, 79</em>, 162-167. <a href="https://doi.org/10.1016/j.procir.2019.02.028" target="_blank" rel="noopener" aria-label="DOI link for Profanter et al., 2019" class="ref-doi">https://doi.org/10.1016/j.procir.2019.02.028</a></p>
+    </li>
+    <li class="ref-item" id="ref-Quigley-et-al.-2009">
+      <span class="ref-cite">Quigley et al., 2009</span>
+      <p class="ref-text">Quigley, M., Conley, K., Gerkey, B., Faust, J., Foote, T., Leibs, J., Wheeler, R., &amp; Ng, A. Y. (2009). ROS: An open-source robot operating system. <em>ICRA Workshop on Open Source Software, 3</em>(3.2), 5.</p>
+    </li>
+    <li class="ref-item" id="ref-Rasheed-et-al.-2020">
+      <span class="ref-cite">Rasheed et al., 2020</span>
+      <p class="ref-text">Rasheed, A., San, O., &amp; Kvamsdal, T. (2020). Digital twin: Values, challenges and enablers from a modeling perspective. <em>IEEE Access, 8</em>, 21980-22012. <a href="https://doi.org/10.1109/ACCESS.2020.2970143" target="_blank" rel="noopener" aria-label="DOI link for Rasheed et al., 2020" class="ref-doi">https://doi.org/10.1109/ACCESS.2020.2970143</a></p>
+    </li>
+    <li class="ref-item" id="ref-Rüßmann-et-al.-2015">
+      <span class="ref-cite">Rüßmann et al., 2015</span>
+      <p class="ref-text">Rüßmann, M., Lorenz, M., Gerbert, P., Waldner, M., Engel, P., Harnisch, M., &amp; Justus, J. (2015). <em>Industry 4.0: The future of productivity and growth in manufacturing industries.</em> Boston Consulting Group.</p>
+    </li>
+    <li class="ref-item" id="ref-Tao-et-al.-2019">
+      <span class="ref-cite">Tao et al., 2019</span>
+      <p class="ref-text">Tao, F., Zhang, H., Liu, A., &amp; Nee, A. Y. C. (2019). Digital twin in industry: State-of-the-art. <em>IEEE Transactions on Industrial Informatics, 15</em>(4), 2405-2415. <a href="https://doi.org/10.1109/TII.2018.2873186" target="_blank" rel="noopener" aria-label="DOI link for Tao et al., 2019" class="ref-doi">https://doi.org/10.1109/TII.2018.2873186</a></p>
+    </li>
+    <li class="ref-item" id="ref-Villani-et-al.-2018">
+      <span class="ref-cite">Villani et al., 2018</span>
+      <p class="ref-text">Villani, V., Pini, F., Leali, F., &amp; Secchi, C. (2018). Survey on human-robot collaboration in industrial settings: Safety, intuitive interfaces and applications. <em>Mechatronics, 55</em>, 248-266. <a href="https://doi.org/10.1016/j.mechatronics.2018.02.009" target="_blank" rel="noopener" aria-label="DOI link for Villani et al., 2018" class="ref-doi">https://doi.org/10.1016/j.mechatronics.2018.02.009</a></p>
+    </li>
+    <li class="ref-item" id="ref-Vitoria-de-Melo-Freires-et-al.-2025">
+      <span class="ref-cite">Vitoria de Melo Freires et al., 2025</span>
+      <p class="ref-text">Vitoria de Melo Freires, Lucas, A., Pereira Silva, R. H., &amp; Almeida, E. (2025). Development of a didactic solution for teaching concepts related to digital twins using educational robot. <em>International Journal of Industrial Engineering and Management.</em> <a href="https://doi.org/10.24867/ijiem-398" target="_blank" rel="noopener" aria-label="DOI link for Vitoria de Melo Freires et al., 2025" class="ref-doi">https://doi.org/10.24867/ijiem-398</a></p>
+    </li>
+    <li class="ref-item" id="ref-Xu-et-al.-2014">
+      <span class="ref-cite">Xu et al., 2014</span>
+      <p class="ref-text">Xu, L. D., He, W., &amp; Li, S. (2014). Internet of Things in industries: A survey. <em>IEEE Transactions on Industrial Informatics, 10</em>(4), 2233-2243. <a href="https://doi.org/10.1109/TII.2014.2300753" target="_blank" rel="noopener" aria-label="DOI link for Xu et al., 2014" class="ref-doi">https://doi.org/10.1109/TII.2014.2300753</a></p>
+    </li>
+    <li class="ref-item" id="ref-Xu-et-al.-2021">
+      <span class="ref-cite">Xu et al., 2021</span>
+      <p class="ref-text">Xu, X., Lu, Y., Vogel-Heuser, B., &amp; Wang, L. (2021). Industry 4.0 and Industry 5.0: Inception, conception and perception. <em>Journal of Manufacturing Systems, 61</em>, 530-535. <a href="https://doi.org/10.1016/j.jmsy.2021.10.006" target="_blank" rel="noopener" aria-label="DOI link for Xu et al., 2021" class="ref-doi">https://doi.org/10.1016/j.jmsy.2021.10.006</a></p>
+    </li>
+    </ol>
+  </div>
+</div>
 </main>
 
 <!-- ── Footer ─────────────────────────────────────────────────────────── -->
@@ -1685,7 +1901,7 @@ body {
         Human-in-the-Loop Intelligent Digital Twin for an Educational Robotic Assembly Training Cell
       </strong>
     </p>
-    <p>Erik Tanjuakio &nbsp;·&nbsp; Aditya Chivate &nbsp;·&nbsp; Mohamed Awwad</p>
+    <p>Erik Tanjuakio &nbsp;·&nbsp; Mohamed Awwad &nbsp;·&nbsp; Aditya Chivate</p>
     <p>California Polytechnic State University, San Luis Obispo &nbsp;·&nbsp; Industrial and Manufacturing Engineering &nbsp;·&nbsp; Automation Lab</p>
     <p style="margin-top:.75rem;">
       IISE Annual Conference and Expo 2026 &nbsp;·&nbsp;
@@ -1718,7 +1934,8 @@ function showPage(pageId) {
     }
   }
 
-  var navId = pageId.startsWith('module-a') ? 'nav-track-a'
+  var navId = pageId === 'references'       ? 'nav-references'
+            : pageId.startsWith('module-a') ? 'nav-track-a'
             : pageId.startsWith('module-b') ? 'nav-track-b'
             : pageId === 'track-a'          ? 'nav-track-a'
             : pageId === 'track-b'          ? 'nav-track-b'
@@ -1737,6 +1954,7 @@ function showPage(pageId) {
     'module-b2': 'B2: Vision, Uncertainty & Confidence',
     'module-b3': 'B3: Human-in-the-Loop Decision Making',
     'module-b4': 'B4: Scenario Analysis & Evaluation',
+    'references': 'References',
   };
   document.title = titles[pageId] || titles['home'];
 }
